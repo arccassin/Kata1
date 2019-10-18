@@ -1,0 +1,53 @@
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+/**
+ * Created by User on 16 Окт., 2019
+ */
+public class Kata8Test {
+
+    @Test
+    public void testDiamond3() {
+        StringBuffer expected = new StringBuffer();
+        expected.append(" *\n");
+        expected.append("***\n");
+        expected.append(" *\n");
+
+        assertEquals(expected.toString(), Kata8.print(3));
+    }
+
+    @Test
+    public void testDiamond5() {
+        StringBuffer expected = new StringBuffer();
+        expected.append("  *\n");
+        expected.append(" ***\n");
+        expected.append("*****\n");
+        expected.append(" ***\n");
+        expected.append("  *\n");
+
+        assertEquals(expected.toString(), Kata8.print(5));
+    }
+
+    @Test
+    public void testDiamond1() {
+        StringBuffer expected = new StringBuffer();
+        expected.append("*\n");
+        assertEquals(expected.toString(), Kata8.print(1));
+    }
+
+    @Test
+    public void testDiamond0() {
+        assertEquals(null, Kata8.print(0));
+    }
+
+    @Test
+    public void testDiamondMinus2() {
+        assertEquals(null, Kata8.print(-2));
+    }
+
+    @Test
+    public void testDiamond2() {
+        assertEquals(null, Kata8.print(2));
+    }
+}
